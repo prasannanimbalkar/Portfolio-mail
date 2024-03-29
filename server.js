@@ -26,7 +26,7 @@ app.post('/sendMessage', async (req, res) => {
     const mailOptions = {
         from: email,
         to: MY_GMAIL,
-        subject: subject || `A Message from ${email} (My Portfolio)`,  // Use subject from the body, or a default one
+        subject: `A Message Portfolio - ${subject}`,
         text: `Email: ${email}\n\nName: ${name}\n\nMessage: ${message}`
     };
 
