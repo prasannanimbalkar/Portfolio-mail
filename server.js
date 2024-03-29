@@ -40,6 +40,11 @@ app.post('/sendMessage', async (req, res) => {
     }
 });
 
+// Health check endpoint
+app.get('/health', (req, res) => {
+    res.status(200).send('Service is up and running');
+});
+
 
 app.listen(PORT, () => {
   console.log(`Server listening at http://localhost:${PORT}`)
